@@ -1,0 +1,21 @@
+# Template file for 'vscode-bin'
+pkgname=vscode-bin
+version=1.94.2
+revision=1
+depends="libXtst ncurses nss xdg-utils ripgrep"
+short_desc="Microsoft Code for Linux"
+maintainer="shizonic <realtiaz@gmail.com>, Alex Lohr <alexthkloss@web.de>, Jonathan <joandste@abo.fi>"
+license="MIT"
+homepage="https://code.visualstudio.com/"
+distfiles="https://update.code.visualstudio.com/${version}/linux-x64/stable>code_x64_${version}.tar.gz"
+checksum=364b59a30c569edf7a5dae18c72bfea0c9b01c6ca5608c45ae9c2cff2d178570
+repository=nonfree
+restricted=yes
+
+do_install() {
+
+	vmkdir opt/vscode
+	vmkdir usr/bin
+	vcopy * /opt/vscode
+
+}
