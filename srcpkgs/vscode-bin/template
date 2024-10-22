@@ -2,6 +2,7 @@
 pkgname=vscode-bin
 version=1.94.2
 revision=1
+archs="x86_64"
 depends="libXtst ncurses nss xdg-utils ripgrep"
 short_desc="Microsoft Code for Linux"
 maintainer="Jonathan <joandste@abo.fi>"
@@ -16,6 +17,7 @@ do_install() {
 
 	vmkdir opt/vscode
 	vmkdir usr/bin
-	vcopy * /opt/vscode
+	vcopy * opt/vscode
+	vinstall ${FILESDIR}/code.sh 755 usr/bin code
 
 }
