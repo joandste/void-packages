@@ -1,0 +1,13 @@
+pkgname=hy
+version=0.29.0
+revision=1
+build_style=python3-pep517
+depends="python3-funcparserlib"
+hostmakedepends="python3-setuptools python3-build python3-wheel python3-installer"
+checkdepends="${depends} python3-pytest"
+short_desc="A dialect of Lisp that's embedded in Python"
+maintainer="Jonathan <joandste@abo.fi>"
+license="MIT"
+homepage="http://hylang.org/"
+distfiles="https://github.com/hylang/hy/archive/$version.tar.gz>$pkgname-$version.tar.gz"
+checksum=ed44b2559973a65acaea9b7ce56cb2367a8a05761b47ef7d7d723341c65ee90d
